@@ -1,10 +1,14 @@
 const express = require("express");
 const connectDB = require("./config/db");
+const bcrypt = require("bcryptjs");
 
 const app = express();
 
-// connect Database
+// Connect Database
 connectDB();
+
+// Init Middleware
+app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("API Running"));
 
