@@ -1,6 +1,5 @@
 const express = require("express");
 const connectDB = require("./config/db");
-const bcrypt = require("bcryptjs");
 
 const app = express();
 
